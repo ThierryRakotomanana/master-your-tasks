@@ -3,8 +3,8 @@ import React from 'react';
 export function List({value}){
     
         return (
-                <div className="container">
+                <li className="container" key={value}>
                     {value}
-                </div>
+                </li>
         )
 }
