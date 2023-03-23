@@ -1,11 +1,12 @@
 import React from 'react';
 
-export function List({message, handleClick}){
+export function List({value, onClick, id}){
     
         return (
-                <li className="container" key={message}>
-                    {message}
-                    <button onClick={handleClick}>Delete</button>
+                <li className="container" key={id}>
+                    {value}
+                    <button onClick={onClick}>Delete</button>
+                    {id}
                 </li>
         )
 }

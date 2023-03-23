@@ -19,7 +19,7 @@ export function Task(){
                     <button type='submit' onClick={handleClick}>Add new task</button>
                 </div>
                 <ul>
-                 {listItems.toDo.map( (message)  => <List message={message} key={message}/>)}
+                 {listItems.toDo.map( (tache, index)  => <List value={tache} onClick={ () => setListItems({toDo : listItems.toDo.filter(task => task!== tache)})} id={index} key={index}/>)}
                 </ul>
             </div>
         )
