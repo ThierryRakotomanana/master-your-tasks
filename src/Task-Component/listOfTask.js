@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { List } from './list';
+import { List } from './task';
 import './Task.css'
 
 export function Task(){
