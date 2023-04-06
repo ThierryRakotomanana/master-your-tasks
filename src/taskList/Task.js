@@ -7,8 +7,9 @@ export function Task(){
     const [listItems, setListItems] = useState({toDo : []});
     
     function handleClick(){
+        const newTask = listItems
         setListItems({
-            toDo : listItems.toDo.concat(message)
+            toDo : newTask.toDo.concat(message)
         })
     }
         return (
