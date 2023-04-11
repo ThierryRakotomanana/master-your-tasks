@@ -10,9 +10,14 @@ export function Task(){
         const newTask = [...listItems], id = new Date().getTime() , value = message;
         newTask.push({id, value})
         setListItems(newTask)
+        console.log(listItems)
     }
 
     function deleteTask(id){
+        const newTaskList = [...listItems]
+        setListItems(newTaskList.filter( task => task.id !== id ))
+    }
+    function editTask(id){
         const newTaskList = [...listItems]
         setListItems(newTaskList.filter( task => task.id !== id ))
     }
@@ -25,7 +30,7 @@ export function Task(){
                     <button type='submit' onClick={() => addNewTask()}>Add new task</button>
                 </div>
                 <ul>
-                 {listItems.map( (task)  => <List value={task.value} onClick={ () => deleteTask(task.id)} key={task.id}/>)}
+                 {listItems.map( (task)  => <List value={task.value} deleteTask={ () => deleteTask(task.id)} editTask={() => editTask(task.id)} key={task.id}/>)}
                 </ul>
             </div>
         )
