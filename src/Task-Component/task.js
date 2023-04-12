@@ -9,9 +9,9 @@ export function List({value, deleteTask, editTask}){
         }
         return (
                 <li className="container">
-                    {show && content}
-                    {show ?
+                    {show ? 
                      <span>
+                        {content}
                         <button onClick={deleteTask}>Delete</button> 
                         <button onClick={changeEdit}>Edit</button>
                      </span> :
