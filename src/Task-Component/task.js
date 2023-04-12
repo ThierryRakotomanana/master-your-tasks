@@ -15,11 +15,11 @@ export function List({value, deleteTask, editTask}){
                         <button onClick={deleteTask}>Delete</button> 
                         <button onClick={changeEdit}>Edit</button>
                      </span> :
-                    <div>
+                    <span>
                         <input value={content}  onChange={ (e) => setContent(e.target.value)}/>
                         <button onClick={deleteTask}>Delete</button>
                          <button onClick={() =>changeEdit(content)}>save your edit</button>
-                    </div>
+                    </span>
                     }
                 </li>
         )
