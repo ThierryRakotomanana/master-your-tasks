@@ -9,18 +9,11 @@ export function List({value, deleteTask, editTask}){
         }
         return (
                 <li className="container">
-                    {show ? 
                      <span>
-                        {content}
+                        {show ? content : <input value={content}  onChange={ (e) => setContent(e.target.value)}/>}
                         <button onClick={deleteTask}>Delete</button> 
-                        <button onClick={() => changeEdit(false)}>Edit</button>
-                     </span> :
-                    <span>
-                        <input value={content}  onChange={ (e) => setContent(e.target.value)}/>
-                        <button onClick={deleteTask}>Delete</button>
-                         <button onClick={() =>changeEdit(content)}>save your edit</button>
-                    </span>
-                    }
+                        <button onClick={() => changeEdit( show ? false : content)}>{show ? "Edit" : "Save your edit"}</button>
+                     </span> 
                 </li>
         )
 }
