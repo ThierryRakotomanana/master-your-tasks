@@ -16,8 +16,13 @@ export function Task(){
         const newTaskList = [...listItems]
         setListItems(newTaskList.filter( task => task.id !== id ))
     }
-    function editTask(newTitle){
-        console.log(newTitle)
+    function editTask(newTitle, id){
+        let newTaskList = [...listItems]
+        newTaskList = newTaskList.map( task => {
+            if (task.id === id ) task.value = newTitle
+            return task
+        } )
+        setListItems(newTaskList)
     }
 
         return (
@@ -28,7 +33,7 @@ export function Task(){
                     <button type='submit' onClick={() => addNewTask()}>Add new task</button>
                 </div>
                 <ul>
-                 {listItems.map( (task)  => <List value={task.value} deleteTask={ () => deleteTask(task.id)} editTask={(newTitle) => editTask(newTitle)} key={task.id}/>)}
+                 {listItems.map( (task)  => <List value={task.value} deleteTask={ () => deleteTask(task.id)} editTask={(newTitle) => editTask(newTitle, task.id)} key={task.id}/>)}
                 </ul>
             </div>
         )
