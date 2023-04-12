@@ -10,16 +10,14 @@ export function Task(){
         const newTask = [...listItems], id = new Date().getTime() , value = message;
         newTask.push({id, value})
         setListItems(newTask)
-        console.log(listItems)
     }
 
     function deleteTask(id){
         const newTaskList = [...listItems]
         setListItems(newTaskList.filter( task => task.id !== id ))
     }
-    function editTask(id){
-        const newTaskList = [...listItems]
-        setListItems(newTaskList.filter( task => task.id !== id ))
+    function editTask(){
+        // features of changig a task here
     }
 
         return (
