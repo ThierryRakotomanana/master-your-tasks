@@ -17,7 +17,7 @@ export function Task(){
         setListItems(newTaskList.filter( task => task.id !== id ))
     }
     function editTask(){
-        // features of changig a task here
+        
     }
 
         return (
@@ -28,7 +28,7 @@ export function Task(){
                     <button type='submit' onClick={() => addNewTask()}>Add new task</button>
                 </div>
                 <ul>
-                 {listItems.map( (task)  => <List value={task.value} deleteTask={ () => deleteTask(task.id)} editTask={() => editTask(task.id)} key={task.id}/>)}
+                 {listItems.map( (task)  => <List value={task.value} deleteTask={ () => deleteTask(task.id)} editTask={() => editTask()} key={task.id}/>)}
                 </ul>
             </div>
         )
