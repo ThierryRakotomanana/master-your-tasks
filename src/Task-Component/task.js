@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 export function List({value, deleteTask, editTask}){  
         const [content, setContent] = useState(value)    
         const [show, setShow] = useState(true)
-        function changeEdit(props = false){
+        function changeEdit(newTitle){
                 setShow(!show)
-                props && editTask()
+                newTitle && editTask(newTitle)
         }
         return (
                 <li className="container">
@@ -13,7 +13,7 @@ export function List({value, deleteTask, editTask}){
                      <span>
                         {content}
                         <button onClick={deleteTask}>Delete</button> 
-                        <button onClick={changeEdit}>Edit</button>
+                        <button onClick={() => changeEdit(false)}>Edit</button>
                      </span> :
                     <span>
                         <input value={content}  onChange={ (e) => setContent(e.target.value)}/>
