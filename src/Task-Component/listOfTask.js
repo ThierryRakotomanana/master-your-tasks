@@ -28,7 +28,7 @@ export function Task(){
     return (
         <div className="container">
             <div className="container">
-                <h2 className="Title">To Do App</h2>
+                <h2 className="text-3xl font-bold underline">To Do App</h2>
                 <input id="taskName" value={message} onChange={e => setMessage(e.target.value)} />
                 <button type='submit' onClick={() => addNewTask()}>Add new task</button>
             </div>
