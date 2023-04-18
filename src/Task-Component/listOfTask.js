@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
+import { className } from './className';
 import { List } from './task';
+import { svg, svgOfA } from './svg';
 
 export function Task(){
-    const className = {
-        div : 'p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4',
-
-    }
     const [message, setMessage] = useState('');
     const [listItems, setListItems] = useState([]);
     
@@ -30,11 +28,19 @@ export function Task(){
 
     return (
         <div className={className.div}>
-            <div className="">
-                <h2 className="">To Do App</h2>
-                <input id="taskName" value={message} onChange={e => setMessage(e.target.value)} />
-                <button type='submit' onClick={() => addNewTask()}>Add new task</button>
-            </div>
+            <header className={className.header}>
+                <div className={className.divOfHeader}>
+                    <h2 className={className.h2}>To Do App</h2>
+                    <a className={className.a} type='submit' onClick={() => addNewTask()}>
+                        {svg.a}
+                        New Task
+                    </a>
+                </div>
+                <form class={className.form}>
+                    {svg.search}
+                    <input className={className.input}  id="taskName" value={message} onChange={e => setMessage(e.target.value)} />
+                </form>
+                </header>
             <ul>
                 {
                     listItems.map( (task)  => 
