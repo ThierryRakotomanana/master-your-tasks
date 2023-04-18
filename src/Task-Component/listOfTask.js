@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { List } from './task';
 
 export function Task(){
+    const className = {
+        div : 'p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4',
+
+    }
     const [message, setMessage] = useState('');
     const [listItems, setListItems] = useState([]);
     
@@ -25,13 +29,7 @@ export function Task(){
     }
 
     return (
-        <div className="">
-            <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
-                <div>
-                    <div class="text-xl font-medium text-black">ChitChat</div>
-                    <p class="text-slate-500">You have a new message!</p>
-                </div>
-            </div>
+        <div className={className.div}>
             <div className="">
                 <h2 className="">To Do App</h2>
                 <input id="taskName" value={message} onChange={e => setMessage(e.target.value)} />
