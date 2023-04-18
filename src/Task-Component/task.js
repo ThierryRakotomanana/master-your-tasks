@@ -8,7 +8,7 @@ export function List({value, deleteTask, editTask}){
                 newTitle && editTask(newTitle)
         }
         return (
-                <li className="container">
+                <li className="">
                      <span>
                         {show ? content : <input value={content}  onChange={ (e) => setContent(e.target.value)}/>}
                         <button onClick={deleteTask}>Delete</button> 
