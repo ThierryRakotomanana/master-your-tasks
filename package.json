@@ -1,13 +1,17 @@
 {
   "name": "my-app",
   "version": "0.1.0",
+  "homepage": "https://ThierryRakotomanana.github.io/master-your-tasks",
   "private": true,
   "dependencies": {
+    "@headlessui/react": "^1.7.14",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
@@ -27,6 +31,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
+    "gh-pages": "^5.0.0",
     "postcss": "^8.4.22",
     "tailwindcss": "^3.3.1"
   }

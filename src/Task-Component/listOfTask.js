@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { className } from './className';
 import { List } from './task';
-import { svg, svgOfA } from './svg';
+import { Toggle } from '../headlessUiComponent/toogle';
+import { svg} from './svg';
 
 export function Task(){
     const [message, setMessage] = useState('');
@@ -33,7 +34,7 @@ export function Task(){
                     <h2 className={className.h2}>To Do App</h2>
                     <a className={className.a} type='submit' onClick={() => addNewTask()}>
                         {svg.a}
-                        New Task
+                        Add New Task
                     </a>
                 </div>
                 <form class={className.form}>
@@ -50,6 +51,7 @@ export function Task(){
                         key={task.id}/>
                     )
                 }
+                <Toggle/>
             </ul>
         </div>
     )
