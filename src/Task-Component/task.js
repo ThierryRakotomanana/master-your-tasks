@@ -13,8 +13,8 @@ export function List({value, deleteTask, editTask}){
                 <li className="">
                      <span>
                         {show ? content : <input className={className.input} value={content}  onChange={ (e) => setContent(e.target.value)}/>}
-                        <button className={className.texte} onClick={deleteTask}>Delete</button> 
-                        <button className={className.texte} onClick={() => changeEdit( show ? false : content)}>{show ? "Edit" : "Save your edit"}</button>
+                        <button type='button' className={className.button} onClick={deleteTask}>Delete</button> 
+                        <button className={className.button} onClick={() => changeEdit( show ? false : content)}>{show ? "Edit" : "Save your edit"}</button>
                      </span> 
                 </li>
         )
