@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { className } from './className';
 import { Toggle } from '../headlessUiComponent/toogle';
 
 export function List({value, deleteTask, editTask}){  
