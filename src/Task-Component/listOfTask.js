@@ -50,7 +50,6 @@ export function Task(){
                         key={task.id}/>
                     )
                 }
-                <Toggle/>
             </ul>
         </div>
     )
