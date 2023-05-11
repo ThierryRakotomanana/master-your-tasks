@@ -14,7 +14,7 @@ export function List({value, deleteTask, editTask}){
                      <span className={className.grid}>
                         {show ? <span className={className.first}>{content} </span>: <input className={className.input + " " + className.first} value={content}  onChange={ (e) => setContent(e.target.value)}/>}
                         <button type='button' className={className.button} onClick={deleteTask}>Delete</button> 
-                        <Toggle className={className.button} onClick={() => changeEdit( show ? false : content)}>{show ? "Edit" : "Save your edit"}</Toggle>
+                        <Toggle onClick={() => changeEdit( show ? false : content)}>{show ? "Edit" : "Save your edit"}</Toggle>
                      </span> 
                 </li>
         )

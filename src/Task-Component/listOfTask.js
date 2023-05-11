@@ -28,7 +28,7 @@ export function Task(){
     }
 
     return (
-        <div className={className.div}>
+        <div className="max-w-3xl mx-auto bg-gray-200">
             <header className={className.header}>
                 <div className={className.divOfHeader}>
                     <h2 className={className.h2}>To Do App</h2>
@@ -41,7 +41,7 @@ export function Task(){
                     {svg.search}
                     <input className={className.input}  id="taskName" value={message} onChange={e => setMessage(e.target.value)} />
                 </form>
-                </header>
+            </header>
             <ul>
                 {
                     listItems.map( (task)  => 

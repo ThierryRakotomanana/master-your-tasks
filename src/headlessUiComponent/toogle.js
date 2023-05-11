@@ -5,7 +5,7 @@ export function Toggle() {
   const [enabled, setEnabled] = useState(false)
 
   return (
-    <div className="py-16">
+    <div className="py-0.5">
       <Switch
         checked={enabled}
         onChange={setEnabled}
