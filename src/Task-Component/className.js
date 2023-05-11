@@ -1,6 +1,6 @@
 export const className = {
     div : "space-y-4",
-    texte : "text-slate-500",
+    texte : "text-slate-300",
     header : "bg-white space-y-4 p-4 sm:px-8 sm:py-6 lg:p-4 xl:px-8 xl:py-6",
     divOfHeader : "flex items-center justify-between",
     h2 : "font-semibold text-slate-900",
