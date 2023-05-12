@@ -22,7 +22,6 @@ export function Task(){
         let newTaskList = [...listItems]
         setListItems(newTaskList.map( task => {
             if (task.id === id ) task.value = newTitle
-            return task
         } ))
     }
 
@@ -41,13 +40,13 @@ export function Task(){
                     <input className="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-10 ring-1 ring-slate-200 shadow-sm"  id="taskName" value={message} onChange={e => setMessage(e.target.value)} />
                 </form>
             </header>
-            <ul>
+            <ul className='flex flex-col justify-start p-3 gap-3'>
                 {
-                    listItems.map( (task)  => 
-                        <List value={task.value} 
+                    listItems.map( (task,index)  => 
+                        <List value={task.value} index={index}
                         deleteTask={ () => deleteTask(task.id)} 
                         editTask={(newTitle) => editTask(newTitle, task.id)} 
-                        key={task.id}/>
+                        key={task.id}></List> 
                     )
                 }
             </ul>
