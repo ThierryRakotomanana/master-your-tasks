@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { List } from './task';
-import { Toggle } from '../headlessUiComponent/toogle';
 import { svg} from './svg';
 
 export function Task(){
@@ -22,6 +21,7 @@ export function Task(){
         let newTaskList = [...listItems]
         setListItems(newTaskList.map( task => {
             if (task.id === id ) task.value = newTitle
+            return task
         } ))
     }
 

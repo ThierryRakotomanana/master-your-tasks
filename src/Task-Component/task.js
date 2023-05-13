@@ -6,7 +6,7 @@ export function List({value, index, deleteTask, editTask}){
         const [show, setShow] = useState(true)
         function changeEdit(newTitle){
                 setShow(!show)
-                //newTitle && editTask(newTitle)
+                newTitle && editTask(newTitle)
         }
         return (
                 <li className={ `flex flex-row justify-between items-center rounded-md p-3 + ${index%2 == 0 ? "bg-teal-600" : "bg-slate-600"}`}>
