@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Toggle } from '../headlessUiComponent/toogle';
 
 export function List({value, index, deleteTask, editTask}){  
         const [content, setContent] = useState(value)    
